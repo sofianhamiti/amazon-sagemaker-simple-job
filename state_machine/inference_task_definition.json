@@ -1,0 +1,22 @@
+{
+  "TrainingJobName.$": "$$.Execution.Name",
+  "RoleArn": "<ADD IAM ROLE ARN HERE>",
+  "AlgorithmSpecification": {
+    "TrainingImage": "<ADD ECR IMAGE URI HERE>",
+    "TrainingInputMode": "File"
+  },
+  "ResourceConfig": {
+    "InstanceCount": 1,
+    "InstanceType": "ml.g5.2xlarge",
+    "VolumeSizeInGB": 20
+  },
+  "Environment": {
+    "test": "value"
+  },
+  "StoppingCondition": {
+    "MaxRuntimeInSeconds": 86400
+  },
+  "OutputDataConfig": {
+    "S3OutputPath": "<ADD DUMMY S3 BUCKET HERE>"
+  }
+}
